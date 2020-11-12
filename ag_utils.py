@@ -262,7 +262,7 @@ def download_model_output(Job_name, job_desc, is_debug):
 
     tmp_dir = f'./tmp/{Job_name}'
     if not os.path.exists(tmp_dir):
-        os.mkdir(tmp_dir)
+        os.makedirs(tmp_dir)
 
     def is_output_file_exists(s3_bucket, s3_prefix):
         try:
